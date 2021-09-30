@@ -1,4 +1,30 @@
-﻿Param(
+<#
+.Synopsis
+   This script will provide a time profile and execution count of all functions and regions in your script.
+.DESCRIPTION
+   Long description
+.EXAMPLE
+Any parameters inside $NamedParameters will get passed to the script on the line "-ScriptFullPath".
+In this example, the parameters DoRegions and DoFunctions will be passed to ExampleScript.ps1.
+
+PS> $NamedParameters = @{DoRegions = $true; DoFunctions = $true};
+PS> C:\Git_Repository\Stopwatch\Stopwatch.ps1 `
+        -ScriptFullPath "C:\Git_Repository\Stopwatch\ExampleScript.ps1" `
+        -ScriptArguments $NamedParameters;
+        
+.PARAMETER ScriptFullPath
+The full path to the script you want to profile.
+
+.PARAMETER ScriptArguments
+A hash table of values to pass to the script that will be profiled.
+The hash table entry name should be your script's named parameter.
+The hash table entry value should be the value to be fed to your script's named parameter.
+
+.OUTPUTS
+Console output.  A table listing regions and functions, execution counts, and durations.
+#>
+
+Param(
     [Parameter(Mandatory=$true)]
     [String]$ScriptFullPath,
 
