@@ -14,3 +14,6 @@ To get started, call Stopwatch.ps1 using two arguments: "-ScriptFullPath" and "-
 The Results:
 
 ![PowerShell_Stopwatch_Example_Run](https://user-images.githubusercontent.com/37883093/135522557-42f51232-a5ac-4714-a4b0-e22cf816b65f.PNG)
+
+
+NOTE:  The two messages at the top of the output are supposed to be there when running against ExampleScript.ps1.  I cooked in a few mistakes on purpose.  Humans to make mistakes, after all.
